@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You 💖</title>
+<style>
+body {
+  background: linear-gradient(to right, #ffd6e8, #ffc0cb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial;
+  margin: 0;
+}
+
+.box {
+background: #ffb6c1;
+padding: 30px;
+border-radius: 20px;
+text-align: center;
+box-shadow: 0 0 25px rgba(0,0,0,0.2);
+position: relative;
+}
+
+h1 {
+color: white;
+}
+
+button {
+padding: 10px 20px;
+margin: 10px;
+border: none;
+border-radius: 12px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.yes {
+background: #ff69b4;
+color: white;
+}
+
+.no {
+background: #ff4d6d;
+color: white;
+position: absolute;
+}
+
+#message {
+display: none;
+margin-top: 20px;
+font-size: 24px;
+color: white;
+} </style>
+
+</head>
+
+<body>
+
+<div class="box">
+  <div style="font-size:40px;">💘</div>
+  <h1>Would you be my girlfriend?</h1>
+
+<button class="yes" onclick="yes()">Yes 💖</button> <button class="yes" onclick="yes()">Yes 😍</button> <button class="no" id="no">No 😢</button>
+
+  <div id="message">Love Ona 💕</div>
+</div>
+
+<script>
+function yes() {
+  document.getElementById("message").style.display = "block";
+}
+
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 100);
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+});
+</script>
+
+</body>
+</html>
